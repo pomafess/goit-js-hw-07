@@ -47,4 +47,16 @@ const makeImagesList = ({ url, alt }) => {
 const elements = images.map(makeImagesList)
 imagesListEl.append(...elements)
 //  Третий вариант
+// const makeImagesCard = ({ url, alt }) => {
+//   return
+//   `<li class="image-item">
+//     <img src="${url}" alt="${alt}" width = 400/>
+//   </li>`;
+// };
+// const makeImagesList = images
+//   .map(makeImagesCard)
+//   .join('')
 
+// imagesListEl.insertAdjacentHTML('afterbegin', makeImagesList)
+// console.log(imagesListEl)
+      
