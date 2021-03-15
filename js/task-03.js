@@ -33,30 +33,37 @@ const imagesListEl = document.querySelector('#gallery');
 // console.log(imagesEl)
 // imagesListEl.append(...imagesEl)
  // Второе решение  с созданием функции
-const makeImagesList = ({ url, alt }) => {
-    const imageItemEl = document.createElement('li');
-    imageItemEl.classList.add('image-item');
-    const imageEl = document.createElement('img');
-    imageEl.src = url;
-    imageEl.alt = alt;
-    imageEl.width = 400;
-    imageItemEl.appendChild(imageEl);
-    return imageItemEl
-  };
+// const makeImagesList = ({ url, alt }) => {
+//     const imageItemEl = document.createElement('li');
+//     imageItemEl.classList.add('image-item');
+//     const imageEl = document.createElement('img');
+//     imageEl.src = url;
+//     imageEl.alt = alt;
+//     imageEl.width = 400;
+//     imageItemEl.appendChild(imageEl);
+//     return imageItemEl
+//   };
 
-const elements = images.map(makeImagesList)
-imagesListEl.append(...elements)
+// const elements = images.map(makeImagesList)
+// imagesListEl.append(...elements)
 //  Третий вариант
 // const makeImagesCard = ({ url, alt }) => {
 //   return
 //   `<li class="image-item">
-//     <img src="${url}" alt="${alt}" width = 400/>
+//     <img src="${url}" alt="${alt}" width=400/>
 //   </li>`;
 // };
+// console.log(makeImagesCard)
 // const makeImagesList = images
 //   .map(makeImagesCard)
 //   .join('')
 
 // imagesListEl.insertAdjacentHTML('afterbegin', makeImagesList)
 // console.log(imagesListEl)
+
+const makeImagesCard = images.map(image => 
+  imagesListEl.insertAdjacentHTML('afterbegin', `<li class="image-item">
+     <img src="${image.url}" alt="${image.alt}" width=400/>
+  </li>`)
+)
       
