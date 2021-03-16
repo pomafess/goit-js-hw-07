@@ -7,5 +7,5 @@ input.value.length === dataLength ? input.classList.add('valid') : input.classLi
 }
 input.addEventListener("input", onInputChange)
 function onInputChange() {
-input.value.length === dataLength ? input.classList.remove('valid') : input.classList.remove('invalid')
+input.classList.remove('valid', 'invalid')
 }
